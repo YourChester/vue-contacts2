@@ -51,6 +51,7 @@ export default {
     },
     deleteContact(state, index) {
       state.contacts.splice(index, 1)
+      localStorage.setItem('contacts', JSON.stringify(state.contacts))
     },
     setContactsOfLocalStore(state, payload) {
       state.contacts = payload
